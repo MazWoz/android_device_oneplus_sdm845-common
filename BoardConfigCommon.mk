@@ -141,15 +141,15 @@ TARGET_USES_MKE2FS := true
 # RIL
 PROTOBUF_SUPPORTED := true
 
-# Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
-BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 BOARD_SEPOLICY_DIRS += device/qcom/sepolicy/vendor/common
 BOARD_SEPOLICY_DIRS += device/qcom/sepolicy/vendor/ssg
 #SELINUX_IGNORE_NEVERALLOWS := true
+
+# Sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := odm op1 op2

@@ -15,4 +15,3 @@ allow init socket_device:sock_file setattr;
 
 allow init property_socket:sock_file write;
 
-
