@@ -1,2 +1,1 @@
-allow crash_dump init:process ptrace;
 allow crash_dump self:capability sys_admin;
