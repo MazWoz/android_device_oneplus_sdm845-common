@@ -1,7 +1,7 @@
 allow untrusted_app proc:dir search;
 allow untrusted_app debugfs:dir search;
 
-unix_socket_connect(untrusted_app, qvrd, qvrd);
+#unix_socket_connect(untrusted_app, qvrd, qvrd);
 allow untrusted_app qvrd:fd use;
 
 
