@@ -5,4 +5,3 @@ type qvrd_socket, file_type, mlstrustedobject, coredomain_socket;
 type sysfs_oem, sysfs_type, fs_type;
 type sysfs_fpc_proximity, sysfs_type, fs_type;
 
-
