@@ -1,0 +1,4 @@
+dontaudit radio default_android_service:service_manager add;
+get_prop(radio, qcom_ims_prop)
+
+

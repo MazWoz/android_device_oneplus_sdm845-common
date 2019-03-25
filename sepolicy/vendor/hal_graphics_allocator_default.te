@@ -1,0 +1,4 @@
+type host1x_device, dev_type, mlstrustedobject;
+
+allow hal_graphics_allocator_default host1x_device:chr_file { read write open ioctl };
+

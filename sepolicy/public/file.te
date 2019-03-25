@@ -1,0 +1,8 @@
+type sysfs_oem, sysfs_type, fs_type;
+
+type hal_light_sdm845, coredomain, domain;
+
+# Allow a base set of permissions required for a domain to offer a
+# HAL implementation of the specified type over HwBinder.
+typeattribute hal_light_sdm845 halserverdomain;
+typeattribute hal_light_sdm845 hal_light_server;

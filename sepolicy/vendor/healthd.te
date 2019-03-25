@@ -1,0 +1,5 @@
+allow hal_health_default sysfs:file { read write open };
+
+dontaudit healthd sysfs:file { read write open ioctl getattr };
+
+

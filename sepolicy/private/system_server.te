@@ -1,0 +1,2 @@
+dontaudit system_server dalvikcache_data_file:file { execute write };	
+dontaudit system_server default_prop:property_service { set };

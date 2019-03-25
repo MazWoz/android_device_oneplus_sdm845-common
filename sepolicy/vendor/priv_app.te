@@ -1,14 +1,11 @@
 allow priv_app vendor_firmware_file:dir getattr;
-
-allow priv_app bt_firmware_file:filesystem getattr;
-allow priv_app firmware_file:filesystem getattr;
 allow priv_app persist_file:lnk_file getattr;
 
 allow priv_app bg_boot_complete_prop:file read;
 allow priv_app bg_daemon_prop:file read;
-#allow priv_app bluetooth_prop:file read;
+dontaudit priv_app bluetooth_prop:file read;
 allow priv_app bootanim_exec:file getattr;
-#allow priv_app bootloader_boot_reason_prop:file read;
+dontaudit priv_app bootloader_boot_reason_prop:file read;
 allow priv_app camera_prop:file read;
 allow priv_app cnd_vendor_prop:file read;
 allow priv_app drmserver_exec:file getattr;
@@ -22,3 +19,23 @@ allow priv_app thermalserviced_exec:file getattr;
 allow priv_app vold_exec:file getattr;
 allow priv_app vold_prepare_subdirs_exec:file getattr;
 
+
+
+allow priv_app bluetooth_data_file:dir getattr;
+allow priv_app cgroup:dir { open read };
+allow priv_app configfs:dir open;
+allow priv_app configfs:file getattr;
+allow priv_app configfs:lnk_file getattr;
+allow priv_app firmware_file:filesystem getattr;
+allow priv_app mnt_vendor_file:lnk_file getattr;
+allow priv_app nfc_data_file:dir getattr;
+allow priv_app proc_interrupts:file { open read };
+allow priv_app proc_modules:file { getattr open read };
+allow priv_app proc_version:file { getattr open };
+allow priv_app sysfs:dir open;
+allow priv_app vendor_file:file getattr;
+allow priv_app wifi_prop:file { getattr open };
+
+
+allow priv_app bt_firmware_file:filesystem getattr;
+allow priv_app firmware_file:filesystem getattr;

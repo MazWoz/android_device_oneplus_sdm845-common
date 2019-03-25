@@ -1,0 +1,5 @@
+allow hal_light_sdm845 { sysfs_graphics sysfs_oem }:lnk_file read;
+allow hal_light_sdm845 { sysfs_graphics sysfs_oem }:file rw_file_perms;
+allow hal_light_sdm845 { sysfs_graphics sysfs_leds sysfs_oem }:dir r_dir_perms;
+allow hal_light_sdm845 sysfs_graphics:dir search;
+

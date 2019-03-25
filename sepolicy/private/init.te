@@ -5,10 +5,10 @@ allow init vendor_file:file mounton;
 allow init vendor_configs_file:file mounton;
 
 # Allow init to chown/chmod on pseudo files in /sys
-allow init sysfs_type:file { setattr };
+dontaudit init sysfs_type:file { open read setattr };
 
 allow init socket_device:sock_file create;
-allow init system_file:file execute;
+dontaudit init system_file:file execute_no_trans;
 
 allow init hwservicemanager:binder call;
 allow init netutils_wrapper_exec:file execute;
@@ -17,10 +17,17 @@ allow init socket_device:sock_file unlink;
 allow init netutils_wrapper_exec:file { open read };
 allow init socket_device:sock_file setattr;
 
-#allow init netutils_wrapper_exec:file execute_no_trans;
-
-allow init vendor_file:file execute;
+dontaudit init netutils_wrapper_exec:file execute_no_trans;
+dontaudit init vendor_file:file execute_no_trans;
 allow init netutils_wrapper_exec:file getattr;
 allow init property_socket:sock_file write;
+
+dontaudit init proc:file { read setattr };
+allow init sysfs_bluetooth:file { read write open };
+allow init sysfs_devices_system_cpu:file { read write };
+allow init sysfs_wlan_fwpath:file setattr;
+allow init sysfs:file { setattr };
+
+dontaudit init system_file:file execute_no_trans;
 
 
